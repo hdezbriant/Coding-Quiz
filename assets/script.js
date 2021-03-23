@@ -2,8 +2,6 @@
 var quizSpace = document.querySelector(".quizSpace");
 var quizStartBtn = document.querySelector("#startBtn");
 // var quizAnswer = 
-// var quizOptions = [];
-// var timerValue = 
 // var quizScore = 
 // var highScores = 
 var quizQuestions = [
@@ -13,14 +11,14 @@ var quizQuestions = [
         B: ".css",
         C: ".jquery",
         answer: "B",
-      },
+    },
     {
         Question: "What is HTML short for?",
         A: "Hypertext Mark-up Language",
         B: "Hypertext Made-up Language",
         C: "Hypertext Model Lingo",
         answer: "A",
-      },
+    },
     {
         Question: "What development language is powered entirely by coffee?",
         A: "CSS",
@@ -30,13 +28,27 @@ var quizQuestions = [
     }        
 ]
 
+var timerValue = 3;
+var timerEl = document.querySelector("#timer");
 
 // function start quiz? {}
 
-quizStartBtn.addEventListener("click", function() {
-    // window.alert('Hello?');
+quizStartBtn.addEventListener("click", function startTime(){
+    console.log('Hello?');
+    timerValue = 3;
+    timerEl.textContent = "Time remaining: " + timerValue + " seconds";
+        var timerInterval = setInterval(function() {
+            timerValue--;
+            timerEl.textContent = "Time remaining: " + timerValue + " seconds";
     
-});
+            if(timerValue <= 0) {
+                clearInterval(timerInterval);
+                console.log(timerValue);
+            }
+        }, 1000)
+    }
+);
+
 
 
 
@@ -46,5 +58,6 @@ quizStartBtn.addEventListener("click", function() {
 
 // function interval for timer? {}
 // + include function for making timer = score
+
 
 //
