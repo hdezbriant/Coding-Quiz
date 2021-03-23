@@ -1,0 +1,38 @@
+* {
+    border: 1px solid black;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    margin: 1rem;
+}
+
+h1 {
+    font-size: 200%;
+}
+
+h2 {
+    font-size: 150%;
+    text-align: center;
+}
+
+.quizSpace {
+    display: flex;
+    justify-content: center;
+}
+
+#startBtn {
+    font-size: 125%;
+    margin-top: 100px;
+    padding: 5px;
+    border-radius: 40px;
+}
+
+#quiz {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
